@@ -1,0 +1,30 @@
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\bin\Debug\Datos.dll
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\bin\Debug\Datos.pdb
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\bin\Debug\AccesoDatos.dll
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\bin\Debug\EntityFramework.dll
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\bin\Debug\AccesoDatos.pdb
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\bin\Debug\AccesoDatos.dll.config
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\bin\Debug\EntityFramework.xml
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\obj\Debug\Datos.csproj.Up2Date
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\obj\Debug\Datos.dll
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\obj\Debug\Datos.pdb
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Datos\bin\Debug\Datos.dll.config
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\bin\Debug\Datos.dll.config
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\bin\Debug\Datos.dll
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\bin\Debug\Datos.pdb
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\bin\Debug\AccesoDatos.dll
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\bin\Debug\EntityFramework.dll
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\bin\Debug\AccesoDatos.pdb
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\bin\Debug\AccesoDatos.dll.config
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\bin\Debug\EntityFramework.xml
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\obj\Debug\Datos.csproj.Up2Date
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\obj\Debug\Datos.dll
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Datos\obj\Debug\Datos.pdb

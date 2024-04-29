@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServiciosModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cedula" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="direccion" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="telefono" Type="nvarchar" MaxLength="13" />
+    <Property Name="idCategoria" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleFactura">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idFactura" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="cantidad" Type="int" Nullable="false" />
+    <Property Name="precio" Type="decimal" Precision="10" Scale="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Name="numero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="precio_unitario" Type="decimal" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="iva" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Cliente_Categoria">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="idCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleFactura_Factura">
+    <End Role="Factura" Type="Self.Factura" Multiplicity="1" />
+    <End Role="DetalleFactura" Type="Self.DetalleFactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="numero" />
+      </Principal>
+      <Dependent Role="DetalleFactura">
+        <PropertyRef Name="idFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleFactura_Producto">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="DetalleFactura" Type="Self.DetalleFactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="DetalleFactura">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Factura_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="SP_Clientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="ServiciosModel1StoreContainer">
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleFactura" EntityType="Self.DetalleFactura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Factura" EntityType="Self.Factura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Cliente_Categoria" Association="Self.FK_Cliente_Categoria">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleFactura_Factura" Association="Self.FK_DetalleFactura_Factura">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="DetalleFactura" EntitySet="DetalleFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleFactura_Producto" Association="Self.FK_DetalleFactura_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="DetalleFactura" EntitySet="DetalleFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Factura_Cliente" Association="Self.FK_Factura_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

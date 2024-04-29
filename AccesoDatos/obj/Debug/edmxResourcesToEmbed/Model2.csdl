@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServiciosModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_Cliente_Categoria" FromRole="Categoria" ToRole="Cliente" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cedula" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="direccion" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="idCategoria" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Categoria" Relationship="Self.FK_Cliente_Categoria" FromRole="Cliente" ToRole="Categoria" />
+    <NavigationProperty Name="Factura" Relationship="Self.FK_Factura_Cliente" FromRole="Cliente" ToRole="Factura" />
+  </EntityType>
+  <EntityType Name="DetalleFactura">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idFactura" Type="Int32" Nullable="false" />
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Int32" Nullable="false" />
+    <Property Name="precio" Type="Decimal" Precision="10" Scale="3" Nullable="false" />
+    <NavigationProperty Name="Factura" Relationship="Self.FK_DetalleFactura_Factura" FromRole="DetalleFactura" ToRole="Factura" />
+    <NavigationProperty Name="Producto" Relationship="Self.FK_DetalleFactura_Producto" FromRole="DetalleFactura" ToRole="Producto" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="numero" />
+    </Key>
+    <Property Name="numero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idCliente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cliente" Relationship="Self.FK_Factura_Cliente" FromRole="Factura" ToRole="Cliente" />
+    <NavigationProperty Name="DetalleFactura" Relationship="Self.FK_DetalleFactura_Factura" FromRole="Factura" ToRole="DetalleFactura" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="precio_unitario" Type="Decimal" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="iva" Type="Byte" Nullable="false" />
+    <NavigationProperty Name="DetalleFactura" Relationship="Self.FK_DetalleFactura_Producto" FromRole="Producto" ToRole="DetalleFactura" />
+  </EntityType>
+  <Association Name="FK_Cliente_Categoria">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="idCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Factura_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Factura" Type="Self.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleFactura_Factura">
+    <End Role="Factura" Type="Self.Factura" Multiplicity="1" />
+    <End Role="DetalleFactura" Type="Self.DetalleFactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="numero" />
+      </Principal>
+      <Dependent Role="DetalleFactura">
+        <PropertyRef Name="idFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DetalleFactura_Producto">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="DetalleFactura" Type="Self.DetalleFactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="DetalleFactura">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ServiciosEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+    <EntitySet Name="DetalleFactura" EntityType="Self.DetalleFactura" />
+    <EntitySet Name="Factura" EntityType="Self.Factura" />
+    <EntitySet Name="Producto" EntityType="Self.Producto" />
+    <AssociationSet Name="FK_Cliente_Categoria" Association="Self.FK_Cliente_Categoria">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Factura_Cliente" Association="Self.FK_Factura_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleFactura_Factura" Association="Self.FK_DetalleFactura_Factura">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="DetalleFactura" EntitySet="DetalleFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DetalleFactura_Producto" Association="Self.FK_DetalleFactura_Producto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="DetalleFactura" EntitySet="DetalleFactura" />
+    </AssociationSet>
+    <FunctionImport Name="SP_Clientes" ReturnType="Collection(ServiciosModel1.SP_Clientes_Result)" />
+  </EntityContainer>
+  <ComplexType Name="SP_Clientes_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="cedula" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="direccion" Nullable="false" MaxLength="80" />
+    <Property Type="String" Name="telefono" Nullable="true" MaxLength="13" />
+    <Property Type="Int32" Name="idCategoria" Nullable="false" />
+  </ComplexType>
+</Schema>

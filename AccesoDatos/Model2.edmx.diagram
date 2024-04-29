@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="82f9fee04bad454b9e228d9f95faefe4" Name="Diagram1">
+        <EntityTypeShape EntityType="ServiciosModel1.Categoria" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosModel1.Cliente" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosModel1.DetalleFactura" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosModel1.Factura" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ServiciosModel1.Producto" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="ServiciosModel1.FK_Cliente_Categoria" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosModel1.FK_Factura_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosModel1.FK_DetalleFactura_Factura" ManuallyRouted="false" />
+        <AssociationConnector Association="ServiciosModel1.FK_DetalleFactura_Producto" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

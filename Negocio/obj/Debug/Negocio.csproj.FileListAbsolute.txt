@@ -1,0 +1,36 @@
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\Negocio.dll
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\AccesoDatos.dll
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\Datos.dll
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\AccesoDatos.pdb
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\AccesoDatos.dll.config
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\Datos.pdb
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\obj\Debug\Negocio.dll
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\Negocio.dll.config
+C:\Users\Servicios\Desktop\p5\Practica_is_05\Negocio\bin\Debug\Datos.dll.config
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\Negocio.dll.config
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\Negocio.dll
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\Negocio.pdb
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\AccesoDatos.dll
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\Datos.dll
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\AccesoDatos.pdb
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\AccesoDatos.dll.config
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\Datos.pdb
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\Datos.dll.config
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\obj\Debug\Negocio.dll
+C:\Users\PC01\Desktop\Practicas IS\p5\Practica_is_05\Negocio\obj\Debug\Negocio.pdb
